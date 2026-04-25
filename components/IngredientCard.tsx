@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Ingredient } from '@/types/meal';
 
 export default function IngredientCard({ ingredient }: { ingredient: Ingredient }) {
@@ -8,10 +9,12 @@ export default function IngredientCard({ ingredient }: { ingredient: Ingredient 
     <Link href={`/ingredients/${encodeURIComponent(ingredient.strIngredient)}`}>
       <div className="bg-card rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-orange-100/50 group">
         <div className="relative w-28 h-28 mb-4 bg-accent rounded-full flex items-center justify-center p-4 group-hover:scale-110 transition-transform duration-300">
-          <img
+          <Image
             src={imageUrl}
             alt={ingredient.strIngredient}
-            className="object-contain w-full h-full drop-shadow-md"
+            width={112}
+            height={112}
+            className="object-contain drop-shadow-md"
           />
         </div>
         <h3 className="font-bold text-foreground text-lg group-hover:text-primary transition-colors">{ingredient.strIngredient}</h3>

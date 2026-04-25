@@ -9,10 +9,16 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'), // Ganti dengan domain asli saat deploy (misal: https://ramasikoki.id)
   title: 'Rama si Koki — Resep Masakan Indonesia Terlengkap',
   description: 'Temukan ribuan resep masakan lezat, tips memasak, dan panduan bahan makanan terbaik hanya di Rama si Koki. Ahlinya masakan rumahan jadi istimewa.',
   keywords: ['resep masakan', 'cara masak', 'resep indonesia', 'koki rama', 'bahan masakan', 'kuliner nusantara'],
   authors: [{ name: 'Rama si Koki' }],
+  icons: {
+    icon: '/logo-rsk.svg',
+    shortcut: '/logo-rsk.svg',
+    apple: '/logo-rsk.svg',
+  },
   openGraph: {
     title: 'Rama si Koki — Resep Masakan Pilihan',
     description: 'Masak jadi lebih mudah dan menyenangkan dengan panduan dari Rama si Koki.',

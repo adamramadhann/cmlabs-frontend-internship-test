@@ -1,5 +1,6 @@
 import { fetchMealById } from '@/lib/api';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 function getYouTubeEmbedUrl(url: string | null) {
@@ -16,8 +17,8 @@ export default async function MealDetailPage({ params }: { params: Promise<{ id:
 
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
-    const ingredient = meal[`strIngredient${i}`];
-    const measure = meal[`strMeasure${i}`];
+    const ingredient = (meal as any)[`strIngredient${i}`];
+    const measure = (meal as any)[`strMeasure${i}`];
     if (ingredient && ingredient.trim()) {
       ingredients.push({ name: ingredient, measure: measure?.trim() || '' });
     }
@@ -45,10 +46,12 @@ export default async function MealDetailPage({ params }: { params: Promise<{ id:
       {/* Hero Section */}
       <div className="grid lg:grid-cols-2 gap-10 mb-12">
         <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-orange-100 border border-border">
-          <img
+          <Image
             src={meal.strMealThumb}
             alt={meal.strMeal}
-            className="object-cover w-full h-full"
+            fill
+            priority
+            className="object-cover"
           />
         </div>
 
