@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👨‍🍳 Rama si Koki - Portal Resep Masakan Indonesia
 
-## Getting Started
+Rama si Koki adalah platform eksplorasi resep masakan modern yang dirancang untuk membantu siapa saja menjadi koki andal di rumah. Temukan inspirasi masakan berdasarkan bahan yang Anda miliki!
 
-First, run the development server:
+![Banner Rama si Koki](/public/logo-rsk.svg)
 
+## ✨ Fitur Unggulan
+
+- **🔍 Pencarian Cerdas:** Cari resep masakan hanya dengan mengetikkan nama bahan.
+- **📁 Kategori Lengkap:** Filter masakan berdasarkan kategori (Daging, Seafood, Dessert, dll).
+- **📱 Responsive UI:** Tampilan dashboard yang elegan dan nyaman di akses dari HP, Tablet, maupun PC.
+- **⚡ Performa Tinggi:** Dibangun dengan Next.js 15 untuk kecepatan akses maksimal.
+- **🎯 SEO Optimized:** Siap bersaing di mesin pencari untuk audiens Indonesia.
+
+## 🚀 Cara Menjalankan Project
+
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal Anda:
+
+### 1. Clone Project
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/username/rama-si-koki.git
+cd rama-si-koki
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependensi
+Project ini menggunakan `pnpm`. Jika Anda belum memilikinya, install dengan `npm install -g pnpm`.
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Jalankan Mode Development
+```bash
+pnpm dev
+```
+Aplikasi akan berjalan di [http://localhost:3000](http://localhost:3000).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Build untuk Production
+```bash
+pnpm build
+pnpm start
+```
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescript.org/)
+- **Icons:** [Font Awesome](https://fontawesome.com/)
+- **API:** [TheMealDB API](https://www.themealdb.com/api.php)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Dokumentasi Lanjutan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Untuk penjelasan lebih detail mengenai struktur folder dan arsitektur kode, silakan baca:
+👉 [Dokumentasi Struktur Proyek](./docs/project-structur.md)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Dibuat oleh **Rama si Koki** Team.
